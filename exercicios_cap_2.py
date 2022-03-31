@@ -7,7 +7,7 @@ print("Exercício 1: \n")
 x = 2.3
 def f(x):
     return x**2+0.25*x-5
-if f != 0:
+if f(x) != 0:
     print("Não é um zero da função")
 else:
     print("É um zero da função \n")
@@ -23,21 +23,12 @@ def f(x):
     return (math.cos(x)+math.sin(x)*1j)**n
 def g(x):
     return math.cos(n*x)+math.sin(n*x)*1j
-if f(x) == g(x):
+if cmath.isclose(f(x),g(x)):
     print("A fórmula é verdadeira")
 else:
     print("A fórmula é falsa")
 print(f(x))
-print(g(x)) #Por algum motivo g(x) tá dando 0.0000000000000002 de diferença, a fórmula funciona quando n=2
-
-#Essa é outra tentativa, usando outro approach
-n = 5
-x = 3
-if (math.cos(x)+math.sin(x)*1j)**n == math.cos(n*x)+math.sin(n*x)*1j:
-    print("Agora a fórmula é verdadeira \n")
-else:
-    print("A fórmula ainda é falsa \n")
-#Mesmo problema de antes, provavelmente causado pela função de Float
+print(g(x)) 
 
 #exercicio: Complex numbers. Verify Euler's formula in the same way: e^ix=cosx+isinx
 print("Exercício 3: \n")
@@ -59,8 +50,8 @@ for iteration in range(2000):
     uold = u
     u = 2*u
 else:
-    print('No convergence') #Esse trecho foi copiado do livro, porém ele não reage da maneira que o livro diz que irá reagir
-#Pelo livro, esse trecho de programa deveria devolver "No convergence" exceto de o u for mudado de float para integer
+    print('No convergence') 
+
 
 #exercicio: An implication C = (A ⇒ B) is a Boolean expression that is defined as
 #C is True if A is False or A and B are both True
