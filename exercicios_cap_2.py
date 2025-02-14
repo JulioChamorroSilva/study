@@ -2,6 +2,8 @@
 from scipy import *
 from matplotlib.pyplot import *
 from numpy import *
+import cmath
+import math
 #exercício: Check whether x = 2.3 is a zero of the function: f(x)=x^2+0.25x-5
 print("Exercício 1: \n")
 x = 2.3

@@ -13,7 +13,7 @@ rng = np.random.default_rng()
 for _ in range(N):
     x_axis = rng.random()
     y_axis = rng.random()
-    if x_axis**2 + y_axis**2 =< 1.0:
+    if x_axis**2 + y_axis**2 <= 1.0:
         n += 1
         # Essa função calcula os pontos dentro do raio r=1 do círculo e acresce a variável n
 resultado = 4.0 * n / N
